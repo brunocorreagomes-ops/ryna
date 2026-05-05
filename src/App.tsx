@@ -58,7 +58,7 @@ export default function App() {
       
       {/* Slide Counter */}
       <div className="absolute top-4 sm:top-8 right-6 sm:right-10 z-50 font-display font-medium text-xs sm:text-sm text-white/40 tracking-[0.2em] pointer-events-none">
-        {String(current + 1).padStart(2, '0')} <span className="opacity-50">/ 08</span>
+        {String(current + 1).padStart(2, '0')} <span className="opacity-50">/ {String(slidesList.length).padStart(2, '0')}</span>
       </div>
 
       {/* Main Slide Area */}
