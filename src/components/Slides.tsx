@@ -34,13 +34,13 @@ const MDiv = ({ children, className = "", ...props }: any) => (
 // -- Individual Slides --
 
 export const Slide1 = () => (
-  <SlideContainer className="relative bg-marrom-escuro overflow-hidden flex-col justify-center px-6 sm:px-12 lg:px-24">
-    <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_80%_50%,rgba(92,107,71,0.25)_0%,transparent_70%),radial-gradient(ellipse_40%_60%_at_10%_80%,rgba(181,196,161,0.1)_0%,transparent_60%)]" />
-    <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-verde opacity-10 clip-diagonal" />
-    <div className="absolute right-0 top-0 bottom-0 w-1 bg-gradient-to-b from-verde-sage to-transparent" />
+  <SlideContainer className="relative bg-marrom-escuro flex-col justify-center px-6 sm:px-12 lg:px-24 pb-32 lg:pb-24 pt-16 lg:pt-0 overflow-y-auto overflow-x-hidden">
+    <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_80%_50%,rgba(92,107,71,0.25)_0%,transparent_70%),radial-gradient(ellipse_40%_60%_at_10%_80%,rgba(181,196,161,0.1)_0%,transparent_60%)] pointer-events-none" />
+    <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-verde opacity-10 clip-diagonal pointer-events-none" />
+    <div className="absolute right-0 top-0 bottom-0 w-1 bg-gradient-to-b from-verde-sage to-transparent pointer-events-none" />
     
-    <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-12 pb-24 md:pb-0 pt-20 md:pt-0">
-      <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left mt-0 md:mt-0">
+    <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-10 lg:gap-12 min-h-max">
+      <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left shrink-0">
         <MDiv className="text-[10px] sm:text-xs uppercase tracking-[0.25em] text-verde-sage mb-6 sm:mb-8 font-bold">
           Proposta de Comunicação & Estratégia de Marca
         </MDiv>
@@ -77,7 +77,7 @@ export const Slide1 = () => (
 
 export const Slide2 = () => (
   <SlideContainer className="bg-off-white text-marrom-escuro flex-col md:flex-row h-full overflow-y-auto md:overflow-hidden relative">
-    <div className="w-full md:w-1/2 bg-verde text-off-white p-8 sm:p-12 lg:p-24 flex flex-col justify-center pb-12 sm:pb-12 relative overflow-hidden">
+    <div className="w-full md:w-1/2 bg-verde text-off-white p-8 sm:p-12 lg:p-24 flex flex-col justify-center pb-12 sm:pb-12 relative overflow-hidden shrink-0 min-h-[60vh] md:min-h-full">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-verde/80 mix-blend-multiply z-10" />
         <img src="https://i.ibb.co/hF7QNjbj/ryna-ensaio-novo-2.png" className="w-full h-full object-cover opacity-50 mix-blend-overlay grayscale" />
@@ -121,7 +121,7 @@ export const Slide2 = () => (
       </div>
     </div>
     
-    <div className="w-full md:w-1/2 bg-off-white p-8 sm:p-12 lg:p-24 flex flex-col justify-center pt-8 pb-32 md:py-24 overflow-y-visible relative">
+    <div className="w-full md:w-1/2 bg-off-white p-8 sm:p-12 lg:p-24 flex flex-col justify-center pt-12 pb-32 md:py-24 overflow-y-visible relative shrink-0 min-h-[60vh] md:min-h-full">
       <MDiv className="text-[10px] tracking-[0.3em] uppercase text-marrom mb-4 relative z-10">Oportunidades</MDiv>
       <MDiv className="font-display text-3xl sm:text-4xl lg:text-5xl font-light leading-tight mb-10 text-marrom-escuro">
         O que<br/>vamos mudar
@@ -145,7 +145,7 @@ export const Slide2 = () => (
 );
 
 export const Slide3 = () => (
-  <SlideContainer className="bg-bege p-8 sm:p-12 lg:p-24 flex-col justify-start items-start overflow-y-auto relative">
+  <SlideContainer className="bg-bege p-8 sm:p-12 lg:p-24 pb-32 lg:pb-24 flex-col justify-start items-start overflow-y-auto relative">
     <div className="absolute inset-0 pointer-events-none z-0">
       <div className="absolute inset-0 bg-bege/95 z-10 mix-blend-overlay"/>
       <img src="https://i.ibb.co/8gwCR0n7/ryna-ensaio-novo-3.png" className="w-full h-full object-cover opacity-15 grayscale mix-blend-multiply" />
@@ -229,7 +229,7 @@ export const Slide3 = () => (
 );
 
 export const Slide4 = () => (
-  <SlideContainer className="bg-marrom-escuro p-8 sm:p-12 lg:p-24 flex-col justify-start sm:justify-center overflow-y-auto relative">
+  <SlideContainer className="bg-marrom-escuro p-8 sm:p-12 lg:p-24 pb-32 lg:pb-24 flex-col justify-start sm:justify-center overflow-y-auto relative">
     <div className="absolute top-0 right-0 w-full md:w-2/3 h-full z-0 pointer-events-none">
       <div className="absolute inset-0 bg-gradient-to-r from-marrom-escuro via-marrom-escuro/80 to-transparent md:to-marrom-escuro/20 z-10" />
       <div className="absolute inset-0 bg-gradient-to-b from-marrom-escuro via-transparent to-marrom-escuro z-10 opacity-70" />
@@ -309,7 +309,7 @@ export const Slide4 = () => (
 
 export const Slide5 = () => (
   <SlideContainer className="bg-off-white text-marrom-escuro flex-col md:flex-row h-full overflow-y-auto md:overflow-hidden relative">
-    <div className="w-full md:w-1/2 bg-marrom text-off-white p-8 sm:p-12 lg:p-24 flex flex-col justify-center relative overflow-hidden">
+    <div className="w-full md:w-1/2 bg-marrom text-off-white p-8 sm:p-12 lg:p-24 flex flex-col justify-center relative overflow-hidden shrink-0 min-h-[60vh] md:min-h-full">
       <img src="https://i.ibb.co/VcLTxQ3G/ryna-ensaio-novo-6.png" className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-20 pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-t from-marrom via-transparent to-transparent z-0 opacity-50 pointer-events-none"/>
       
@@ -337,7 +337,7 @@ export const Slide5 = () => (
       </div>
     </div>
     
-    <div className="w-full md:w-1/2 bg-off-white p-8 sm:p-12 lg:p-24 flex flex-col justify-center pb-32 md:pb-24 pt-8 relative overflow-hidden">
+    <div className="w-full md:w-1/2 bg-off-white p-8 sm:p-12 lg:p-24 flex flex-col justify-center pt-12 pb-32 md:pb-24 relative overflow-hidden shrink-0 min-h-[60vh] md:min-h-full">
       <img src="https://i.ibb.co/tpHR0YvN/ryna-ensaio-novo-8.png" className="absolute bottom-[-10%] right-[-20%] w-[120%] rotate-[10deg] opacity-[0.04] grayscale pointer-events-none" />
       <div className="relative z-10">
         <MDiv className="text-[10px] tracking-[0.3em] uppercase text-marrom mb-4">Imediatismo e Ação</MDiv>
@@ -382,7 +382,7 @@ export const Slide6 = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
-  <SlideContainer className="bg-bege p-8 sm:p-12 lg:p-24 flex-col justify-start sm:justify-center items-center text-center overflow-y-auto relative">
+  <SlideContainer className="bg-bege p-8 sm:p-12 lg:p-24 pb-32 lg:pb-24 flex-col justify-start sm:justify-center items-center text-center overflow-y-auto relative">
     
     {/* Floating images for visual appeal */}
     <img src="https://i.ibb.co/JjjjTc3P/ryna-ensaio-novo-7.png" className="absolute top-12 lg:top-24 left-12 w-40 h-56 md:w-48 md:h-64 rounded-2xl object-cover shadow-[0_20px_50px_-15px_rgba(74,60,46,0.3)] -rotate-6 opacity-40 hover:opacity-100 hover:rotate-0 hover:z-50 transition-all duration-700 hidden md:block border-8 border-off-white pointer-events-auto cursor-zoom-in" onClick={() => setSelectedImage("https://i.ibb.co/JjjjTc3P/ryna-ensaio-novo-7.png")} />
@@ -513,7 +513,7 @@ export const Slide6 = () => {
 };
 
 export const Slide7 = () => (
-  <SlideContainer className="bg-marrom-escuro p-8 sm:p-12 lg:p-24 flex-col justify-start sm:justify-center relative overflow-y-auto overflow-x-hidden">
+  <SlideContainer className="bg-marrom-escuro p-8 sm:p-12 lg:p-24 pb-32 lg:pb-24 flex-col justify-start sm:justify-center relative overflow-y-auto overflow-x-hidden">
     <div className="absolute inset-0 pointer-events-none z-0">
       <div className="absolute inset-0 bg-gradient-to-r from-marrom-escuro via-marrom-escuro/80 to-marrom-escuro/60 z-10 mix-blend-multiply" />
       <img src="https://i.ibb.co/Fkxpj9Lt/ryna-ensaio-novo-1.png" className="w-full h-full object-cover object-[center_30%] opacity-[0.15] grayscale mix-blend-screen mix-blend-overlay" />
@@ -528,7 +528,7 @@ export const Slide7 = () => (
       </h2>
     </MDiv>
     
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl relative z-10 pb-32 sm:pb-0">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl relative z-10">
       <MDiv className="bg-white/5 border border-white/10 rounded-3xl p-8 hover:-translate-y-1 transition-transform">
         <div className="text-[10px] tracking-widest text-verde-sage uppercase font-bold mb-3">Pacote 01</div>
         <h3 className="font-display text-3xl text-off-white font-light mb-2">Fundação<br/>Marca Digital</h3>
@@ -574,12 +574,12 @@ export const Slide7 = () => (
 );
 
 export const Slide8 = () => (
-  <SlideContainer className="bg-verde text-off-white p-8 sm:p-12 lg:p-24 flex-col justify-start sm:justify-center overflow-y-auto relative">
+  <SlideContainer className="bg-verde text-off-white p-8 sm:p-12 lg:p-24 pb-32 lg:pb-24 flex-col justify-start sm:justify-center overflow-y-auto relative">
     <div className="absolute right-[-5%] bottom-[-15%] font-display font-light italic text-[20rem] sm:text-[35rem] leading-none text-white opacity-5 select-none pointer-events-none">
       RH
     </div>
     
-    <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 mt-12 sm:mt-0 pb-32 sm:pb-0">
+    <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 mt-12 sm:mt-0">
       <div className="w-full md:w-1/2 flex flex-col items-start text-left">
         <MDiv className="text-[10px] tracking-[0.3em] uppercase text-bege/60 mb-6">Cronograma & Início</MDiv>
         <MDiv className="font-display text-4xl sm:text-5xl lg:text-[4.5rem] font-light leading-[1.1] mb-6">
@@ -675,7 +675,7 @@ export const SlideConcepts = () => {
   };
 
   return (
-    <SlideContainer className="bg-bege p-8 lg:p-16 flex-col justify-start items-center overflow-y-auto w-full h-full relative">
+    <SlideContainer className="bg-bege p-8 lg:p-16 pb-32 lg:pb-24 flex-col justify-start items-center overflow-y-auto w-full h-full relative">
       <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
         <img src="https://i.ibb.co/vCZc6ysC/ryna-ensaio-novo-10.png" className="w-[150%] h-[150%] object-cover opacity-[0.03] mix-blend-multiply filter blur-sm -translate-x-1/4 -translate-y-1/4" />
       </div>
@@ -694,7 +694,7 @@ export const SlideConcepts = () => {
                animate={{ y: 0, opacity: 1 }} 
                exit={{ y: 20, opacity: 0 }}
                transition={{ type: "spring", damping: 25, stiffness: 300 }}
-               className="bg-off-white p-12 rounded-[2.5rem] shadow-2xl flex flex-col items-center max-w-lg cursor-default border border-black/5"
+               className="bg-off-white p-6 sm:p-12 rounded-[2.5rem] shadow-2xl flex flex-col items-center max-w-lg w-[95%] cursor-default border border-black/5"
                onClick={(e) => e.stopPropagation()}
             >
                {getZoomedContent()}
