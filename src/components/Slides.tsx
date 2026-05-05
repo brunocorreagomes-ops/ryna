@@ -467,3 +467,139 @@ export const Slide8 = () => (
     </div>
   </SlideContainer>
 );
+
+const Concept1Logo = () => (
+  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-[4.5rem] h-[4.5rem] text-[#5C6B47] drop-shadow-sm">
+    <circle cx="50" cy="50" r="42" strokeDasharray="3 4" opacity="0.3"/>
+    <path d="M48 30 C30 20 20 45 44 52 C35 40 45 35 48 30 Z" />
+    <path d="M46 56 C30 55 25 75 44 70 C38 65 42 55 46 56 Z" />
+    <path d="M52 30 C70 20 80 45 56 52 C65 40 55 35 52 30 Z" />
+    <path d="M54 56 C70 55 75 75 56 70 C62 65 58 55 54 56 Z" />
+    <path d="M50 25 C48 40 52 60 50 78" strokeWidth="1.5" strokeLinecap="round" />
+  </svg>
+);
+
+const Concept2Logo = () => (
+  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="2" className="w-[4.5rem] h-[4.5rem] text-[#C27A62] drop-shadow-sm">
+    <path d="M 38 82 C 38 72 38 32 38 32 C 38 22 62 22 62 36 C 62 48 48 50 48 50 C 58 50 68 58 72 82" strokeLinecap="round" strokeLinejoin="round" />
+    <circle cx="50" cy="50" r="44" strokeWidth="0.5" opacity="0.2" />
+    <path d="M 24 50 C 32 32 68 32 76 50 C 68 68 32 68 24 50 Z" strokeWidth="0.5" opacity="0.4" />
+  </svg>
+);
+
+const Concept3Logo = () => (
+  <svg viewBox="0 0 100 100" fill="none" className="w-[4.5rem] h-[4.5rem] drop-shadow-sm">
+    <path d="M 38 38 C 55 28 68 42 60 60 C 52 75 34 65 38 38 Z" fill="#6A828A" opacity="0.85" />
+    <path d="M 62 38 C 75 48 72 70 55 75 C 38 80 46 32 62 38 Z" fill="#B4A89E" opacity="0.8" />
+    <circle cx="50" cy="50" r="44" stroke="#4A3C2E" strokeWidth="1" opacity="0.4" strokeDasharray="12 4" strokeLinecap="round" fill="none" />
+  </svg>
+);
+
+export const SlideConcepts = () => (
+  <SlideContainer className="bg-bege p-8 lg:p-16 flex-col justify-start items-center overflow-y-auto w-full h-full">
+    <MDiv className="mt-8 mb-8 text-center w-full max-w-4xl shrink-0">
+      <div className="text-[10px] tracking-[0.3em] uppercase text-marrom mb-3">Expansão de Identidade Visual</div>
+      <h2 className="font-display text-4xl lg:text-5xl font-light text-marrom-escuro leading-tight mb-2">
+        3 Conceitos de <em className="text-verde">Marca</em>
+      </h2>
+      <p className="text-marrom text-sm">Explorações visuais modernas baseadas na Abordagem Centrada na Pessoa e na sua essência.</p>
+    </MDiv>
+
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 w-full max-w-[85rem] pb-24 px-4 h-auto min-h-0">
+       
+      <MDiv className="bg-off-white rounded-3xl p-8 shadow-[0_10px_40px_-15px_rgba(74,60,46,0.1)] border-t-[6px] border-[#5C6B47] flex flex-col relative overflow-hidden transition-transform hover:-translate-y-1">
+        <div className="flex justify-center mb-6 pt-4">
+          <Concept1Logo />
+        </div>
+        <h3 className="font-display text-[1.65rem] text-marrom-escuro font-bold mb-1">01. O Voo Orgânico</h3>
+        <p className="text-[10px] font-bold text-marrom opacity-70 uppercase tracking-[0.2em] mb-4">Acolhimento & Evolução</p>
+
+        <p className="text-[13px] text-marrom leading-[1.6] mb-8 flex-1 opacity-90">
+          <strong className="text-marrom-escuro">Inspiração:</strong> Evolução natural da borboleta atual. Substituímos traços duros por folhas contínuas e orgânicas, mantendo a familiaridade para seus seguidores enquanto eleva o padrão visual. Simboliza metamorfose, crescimento seguro e o florescer humano.
+        </p>
+
+        <div className="space-y-5 mb-2 bg-[#F8F5F0] -mx-4 -mb-4 p-5 rounded-xl border border-black/5">
+          <div>
+            <div className="text-[9px] uppercase tracking-widest text-[#5C6B47] mb-1 font-bold">Tipografia</div>
+            <div className="flex gap-2 items-baseline">
+              <span className="text-[1.1rem] font-display italic text-marrom-escuro font-medium">Cormorant</span>
+              <span className="text-[13px] text-marrom-escuro font-body opacity-80">+ DM Sans</span>
+            </div>
+          </div>
+          <div>
+            <div className="text-[9px] uppercase tracking-widest text-[#5C6B47] mb-2 font-bold">Paleta de Cores</div>
+            <div className="flex gap-2">
+              <div className="w-7 h-7 rounded-full bg-[#5C6B47] shadow-sm border border-black/5" title="Verde Oliva" />
+              <div className="w-7 h-7 rounded-full bg-[#8A9E6E] shadow-sm border border-black/5" title="Sage" />
+              <div className="w-7 h-7 rounded-full bg-[#EDE8DF] shadow-sm border border-black/5" title="Creme" />
+              <div className="w-7 h-7 rounded-full bg-[#4A3C2E] shadow-sm border border-black/5" title="Marrom Profundo" />
+            </div>
+          </div>
+        </div>
+      </MDiv>
+
+      <MDiv className="bg-off-white rounded-3xl p-8 shadow-[0_10px_40px_-15px_rgba(74,60,46,0.1)] border-t-[6px] border-[#C27A62] flex flex-col relative overflow-hidden transition-transform hover:-translate-y-1">
+        <div className="flex justify-center mb-6 pt-4">
+          <Concept2Logo />
+        </div>
+        <h3 className="text-[1.5rem] text-marrom-escuro font-bold mb-1 font-['Playfair_Display']">02. A Jornada Fluida</h3>
+        <p className="text-[10px] font-bold text-[#C27A62] opacity-80 uppercase tracking-[0.2em] mb-4 font-['Lato']">Identidade & Continuidade</p>
+
+        <p className="text-[13px] text-marrom leading-[1.6] mb-8 flex-1 font-['Lato'] opacity-90">
+          <strong className="text-marrom-escuro">Inspiração:</strong> O protagonismo é do seu nome "Ryna". Um monograma 'R' construído por uma linha contínua ininterrupta, abraçada por formas orgânicas. Representa o processo da terapia: único, não linear, mas contínuo, onde terapeuta e paciente caminham lado a lado.
+        </p>
+
+        <div className="space-y-5 mb-2 bg-[#F8F5F0] -mx-4 -mb-4 p-5 rounded-xl border border-black/5">
+          <div>
+            <div className="text-[9px] uppercase tracking-widest text-[#C27A62] mb-1 font-bold">Tipografia</div>
+            <div className="flex gap-2 items-baseline">
+              <span className="text-[1.1rem] font-['Playfair_Display'] italic text-marrom-escuro font-bold">Playfair</span>
+              <span className="text-[13px] text-marrom-escuro font-['Lato'] opacity-80">+ Lato</span>
+            </div>
+          </div>
+          <div>
+            <div className="text-[9px] uppercase tracking-widest text-[#C27A62] mb-2 font-bold">Paleta de Cores</div>
+            <div className="flex gap-2">
+              <div className="w-7 h-7 rounded-full bg-[#C27A62] shadow-sm border border-black/5" title="Terracota Suave" />
+              <div className="w-7 h-7 rounded-full bg-[#8A9E6E] shadow-sm border border-black/5" title="Verde Sage" />
+              <div className="w-7 h-7 rounded-full bg-[#F4F1ED] shadow-sm border border-black/5" title="Areia Clara" />
+              <div className="w-7 h-7 rounded-full bg-[#5A4D45] shadow-sm border border-black/5" title="Marrom Quente" />
+            </div>
+          </div>
+        </div>
+      </MDiv>
+
+      <MDiv className="bg-off-white rounded-3xl p-8 shadow-[0_10px_40px_-15px_rgba(74,60,46,0.1)] border-t-[6px] border-[#6A828A] flex flex-col relative overflow-hidden transition-transform hover:-translate-y-1">
+        <div className="flex justify-center mb-6 pt-4">
+          <Concept3Logo />
+        </div>
+        <h3 className="text-[1.5rem] text-marrom-escuro font-medium mb-1 font-['Outfit'] tracking-tight">03. O Ponto Central</h3>
+        <p className="text-[10px] font-bold text-[#6A828A] opacity-80 uppercase tracking-[0.2em] mb-4 font-['Inter']">Abordagem Centrada</p>
+
+        <p className="text-[13px] text-marrom leading-[1.6] mb-8 flex-1 font-['Inter'] opacity-90">
+          <strong className="text-marrom-escuro">Inspiração:</strong> Uma homenagem refinada abstrata à ACP. Duas formas orgânicas sobrepostas criam um espaço comum (o vínculo terapêutico). Emolduradas pelo círculo imperfeito "Enso", que simboliza a aceitação incondicional e o estado de evolução constante.
+        </p>
+
+        <div className="space-y-5 mb-2 bg-[#F8F5F0] -mx-4 -mb-4 p-5 rounded-xl border border-black/5">
+          <div>
+            <div className="text-[9px] uppercase tracking-widest text-[#6A828A] mb-1 font-bold">Tipografia</div>
+            <div className="flex gap-2 items-baseline">
+              <span className="text-[1.1rem] font-['Outfit'] text-marrom-escuro font-semibold">Outfit</span>
+              <span className="text-[13px] text-marrom-escuro font-['Inter'] opacity-80">+ Inter</span>
+            </div>
+          </div>
+          <div>
+            <div className="text-[9px] uppercase tracking-widest text-[#6A828A] mb-2 font-bold">Paleta de Cores</div>
+            <div className="flex gap-2">
+              <div className="w-7 h-7 rounded-full bg-[#6A828A] shadow-sm border border-black/5" title="Azul Ardósia" />
+              <div className="w-7 h-7 rounded-full bg-[#B4A89E] shadow-sm border border-black/5" title="Cinza Quente" />
+              <div className="w-7 h-7 rounded-full bg-[#FAF9F7] shadow-sm border border-black/5" title="Off White" />
+              <div className="w-7 h-7 rounded-full bg-[#4A3C2E] shadow-sm border border-black/5" title="Marrom Profundo" />
+            </div>
+          </div>
+        </div>
+      </MDiv>
+
+    </div>
+  </SlideContainer>
+);

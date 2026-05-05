@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { AnimatePresence } from 'motion/react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import { Slide1, Slide2, Slide3, Slide4, Slide5, Slide6, Slide7, Slide8 } from './components/Slides';
+import { Slide1, Slide2, Slide3, SlideConcepts, Slide4, Slide5, Slide6, Slide7, Slide8 } from './components/Slides';
 
-const slidesList = [Slide1, Slide2, Slide3, Slide4, Slide5, Slide6, Slide7, Slide8];
-const slideLabels = ["Capa", "Diagnóstico", "Marca", "Estrutura", "Temas", "Website", "Investimento", "Início"];
+const slidesList = [Slide1, Slide2, Slide3, SlideConcepts, Slide4, Slide5, Slide6, Slide7, Slide8];
+const slideLabels = ["Capa", "Diagnóstico", "Marca", "3 Conceitos", "Estrutura", "Temas", "Website", "Investimento", "Início"];
 
 export default function App() {
   const [current, setCurrent] = useState(0);
