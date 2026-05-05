@@ -365,6 +365,19 @@ export const Slide5 = () => (
   </SlideContainer>
 );
 
+const InViewDiv = ({ children, className = "", delay = 0, ...props }: any) => (
+  <motion.div
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true, amount: 0.2 }}
+    transition={{ duration: 0.7, ease: "easeOut", delay }}
+    className={className}
+    {...props}
+  >
+    {children}
+  </motion.div>
+);
+
 export const Slide6 = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
@@ -376,7 +389,7 @@ export const Slide6 = () => {
     <img src="https://i.ibb.co/wFZk15Gy/ryna-ensaio-novo-9.png" className="absolute bottom-12 lg:bottom-24 right-12 w-40 h-40 md:w-56 md:h-56 rounded-full object-cover shadow-[0_20px_50px_-15px_rgba(74,60,46,0.3)] rotate-6 opacity-40 hover:opacity-100 hover:rotate-0 hover:z-50 transition-all duration-700 hidden md:block border-8 border-off-white pointer-events-auto cursor-zoom-in" onClick={() => setSelectedImage("https://i.ibb.co/wFZk15Gy/ryna-ensaio-novo-9.png")} />
 
     <div className="relative z-10 w-full flex flex-col items-center">
-      <MDiv className="mb-10 text-center w-full max-w-4xl mt-12 sm:mt-0">
+      <InViewDiv delay={0.1} className="mb-10 text-center w-full max-w-4xl mt-12 sm:mt-0">
         <div className="text-[10px] tracking-[0.3em] uppercase text-marrom mb-4">Experiência Digital (Wireframe)</div>
         <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-light text-marrom-escuro leading-tight">
           Seu porto seguro, <em className="text-verde">o Website</em>
@@ -384,11 +397,11 @@ export const Slide6 = () => {
         <p className="max-w-2xl mx-auto text-marrom mt-4 text-sm">
           O design refletirá a mesma paz que seu feed do Instagram, guiando pacientes suavemente até o contato.
         </p>
-      </MDiv>
+      </InViewDiv>
       
       <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       {/* Wireframe UI */}
-      <MDiv className="bg-off-white rounded-2xl overflow-hidden shadow-2xl border border-black/5 ring-1 ring-white">
+      <InViewDiv delay={0.2} className="bg-off-white rounded-2xl overflow-hidden shadow-2xl border border-black/5 ring-1 ring-white">
         <div className="h-10 bg-verde flex items-center px-4 gap-2 border-b border-black/10">
           <div className="w-2.5 h-2.5 rounded-full bg-white/30" />
           <div className="w-2.5 h-2.5 rounded-full bg-white/30" />
@@ -416,7 +429,7 @@ export const Slide6 = () => {
              </div>
           </div>
         </div>
-      </MDiv>
+      </InViewDiv>
 
       {/* Feature list */}
       <div className="flex flex-col h-full justify-center space-y-8 text-left">
@@ -427,18 +440,18 @@ export const Slide6 = () => {
             { num: "3.", title: "Jornada sem Fricção", desc: "Integração direta com o WhatsApp ou Calendly, de forma que o agendamento seja suave com um clique." },
             { num: "4.", title: "Espelho do Feed", desc: "A galeria expõe seu conteúdo do Instagram para reter a atenção e validar autoridade." }
           ].map((feat, i) => (
-            <MDiv key={i} className="flex gap-4">
+            <InViewDiv delay={0.3 + i * 0.15} key={i} className="flex gap-4">
               <span className="font-display text-3xl font-light text-verde/50 leading-none">{feat.num}</span>
               <div>
                 <strong className="block text-marrom-escuro font-medium text-[15px] mb-1">{feat.title}</strong>
                 <p className="text-sm text-marrom leading-relaxed">{feat.desc}</p>
               </div>
-            </MDiv>
+            </InViewDiv>
           ))}
         </div>
         
         {/* Instagram Gallery Miniature */}
-        <MDiv className="pt-6 border-t border-marrom-escuro/10 w-full">
+        <InViewDiv delay={0.9} className="pt-6 border-t border-marrom-escuro/10 w-full">
           <div className="flex items-center gap-2 mb-4 text-marrom-escuro">
             <Instagram size={14} className="opacity-60" />
             <span className="text-[10px] tracking-[0.2em] uppercase opacity-60 font-medium">Recortes do feed no site</span>
@@ -461,7 +474,7 @@ export const Slide6 = () => {
               </button>
             ))}
           </div>
-        </MDiv>
+        </InViewDiv>
       </div>
     </div>
     </div>
