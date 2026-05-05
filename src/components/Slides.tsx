@@ -39,66 +39,90 @@ export const Slide1 = () => (
     <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-verde opacity-10 clip-diagonal" />
     <div className="absolute right-0 top-0 bottom-0 w-1 bg-gradient-to-b from-verde-sage to-transparent" />
     
-    <div className="relative z-10 w-full max-w-5xl items-center sm:items-start text-center sm:text-left flex flex-col">
-      <MDiv className="text-xs uppercase tracking-[0.25em] text-verde-sage mb-8">
-        Proposta de Comunicação & Estratégia de Marca
-      </MDiv>
-      <MDiv className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-[7rem] font-light leading-none mb-4 text-off-white">
-        Ryna<br/><em className="text-verde-sage italic">Hayashi</em>
-      </MDiv>
-      <MDiv className="font-display text-2xl font-light text-bege-escuro mb-12 tracking-wide">
-        Psicóloga Clínica · CRP 06/104087
-      </MDiv>
-      <MDiv className="w-16 h-px bg-verde mb-8" />
-      <MDiv className="text-sm tracking-wider text-bege/60 font-body">
-        Evolução da Identidade Visual · Presença Digital · Conteúdo · Website
+    <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-12 pb-24 md:pb-0 pt-20 md:pt-0">
+      <div className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left mt-0 md:mt-0">
+        <MDiv className="text-[10px] sm:text-xs uppercase tracking-[0.25em] text-verde-sage mb-6 sm:mb-8 font-bold">
+          Proposta de Comunicação & Estratégia de Marca
+        </MDiv>
+        <MDiv className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-[7rem] font-light leading-none mb-4 sm:mb-6 text-off-white">
+          Ryna<br/><em className="text-verde-sage italic leading-tight">Hayashi</em>
+        </MDiv>
+        <MDiv className="font-display text-xl sm:text-2xl font-light text-bege-escuro mb-8 sm:mb-12 tracking-wide">
+          Psicóloga Clínica · CRP 06/104087
+        </MDiv>
+        <MDiv className="w-16 h-px bg-verde mb-6 sm:mb-8" />
+        <MDiv className="text-xs sm:text-sm tracking-wider text-bege/60 font-body leading-relaxed max-w-md">
+          Evolução da Identidade Visual · Presença Digital · Conteúdo · Website
+        </MDiv>
+      </div>
+
+      <MDiv className="w-full md:w-1/2 flex justify-center md:justify-end shrink-0">
+        <div className="relative w-64 h-80 sm:w-80 sm:h-[28rem] lg:w-[26rem] lg:h-[34rem] rounded-t-full rounded-b-3xl overflow-hidden border-t border-x border-white/10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8)] group">
+          {/* Gradient fade to blend into the dark brown background */}
+          <div className="absolute inset-0 bg-gradient-to-t from-marrom-escuro via-marrom-escuro/40 to-transparent z-10 opacity-80 group-hover:opacity-60 transition-opacity duration-700 pointer-events-none" />
+          
+          {/* Inner ring highlight */}
+          <div className="absolute inset-0 rounded-t-full rounded-b-3xl shadow-[inset_0_1px_0_rgba(255,255,255,0.2)] z-20 pointer-events-none" />
+
+          <img 
+            src="https://i.ibb.co/rYdM1ZS/ryna01.png" 
+            alt="Ryna Hayashi" 
+            className="w-full h-full object-cover object-[center_10%] grayscale-[15%] sepia-[10%] group-hover:scale-105 group-hover:grayscale-0 group-hover:sepia-0 transition-all duration-1000 ease-out"
+          />
+        </div>
       </MDiv>
     </div>
   </SlideContainer>
 );
 
 export const Slide2 = () => (
-  <SlideContainer className="bg-off-white text-marrom-escuro flex-col md:flex-row h-full overflow-y-auto md:overflow-hidden">
-    <div className="w-full md:w-1/2 bg-verde text-off-white p-8 sm:p-12 lg:p-24 flex flex-col justify-center pb-12 sm:pb-12">
-      <MDiv className="font-display text-8xl font-light text-white/10 leading-none -mb-4">02</MDiv>
-      <MDiv className="text-[10px] tracking-[0.3em] uppercase text-verde-sage mb-4">Diagnóstico</MDiv>
-      <MDiv className="font-display text-4xl sm:text-5xl lg:text-6xl font-light leading-tight mb-12">
-        Onde<br/>você está<br/>hoje
-      </MDiv>
-      
-      <div className="space-y-6">
-        <MDiv className="flex items-start gap-4">
-          <div className="w-10 h-10 rounded-full bg-verde-sage/30 flex items-center justify-center shrink-0">
-            <CheckCircle2 size={20} className="text-verde-sage" />
-          </div>
-          <div>
-            <strong className="block font-medium mb-1 truncate text-lg">Paleta intuitiva e elegante</strong>
-            <span className="text-sm text-off-white/80 leading-relaxed block">Você já usa verde oliva, bege e marrom nativamente. O sentimento transmitido já está certo.</span>
-          </div>
+  <SlideContainer className="bg-off-white text-marrom-escuro flex-col md:flex-row h-full overflow-y-auto md:overflow-hidden relative">
+    <div className="w-full md:w-1/2 bg-verde text-off-white p-8 sm:p-12 lg:p-24 flex flex-col justify-center pb-12 sm:pb-12 relative overflow-hidden">
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-verde/80 mix-blend-multiply z-10" />
+        <img src="https://i.ibb.co/hF7QNjbj/ryna-ensaio-novo-2.png" className="w-full h-full object-cover opacity-50 mix-blend-overlay grayscale" />
+      </div>
+      <div className="relative z-10 w-full h-full flex flex-col justify-center">
+        <MDiv className="font-display text-8xl font-light text-white/10 leading-none -mb-4 drop-shadow-md">02</MDiv>
+        <MDiv className="text-[10px] tracking-[0.3em] uppercase text-verde-sage mb-4 drop-shadow-md">Diagnóstico</MDiv>
+        <MDiv className="font-display text-4xl sm:text-5xl lg:text-6xl font-light leading-tight mb-12 drop-shadow-md">
+          Onde<br/>você está<br/>hoje
         </MDiv>
-        <MDiv className="flex items-start gap-4">
-          <div className="w-10 h-10 rounded-full bg-verde-sage/30 flex items-center justify-center shrink-0">
-            <CheckCircle2 size={20} className="text-verde-sage" />
-          </div>
-          <div>
-            <strong className="block font-medium mb-1 text-lg">Voz autêntica e conectada</strong>
-            <span className="text-sm text-off-white/80 leading-relaxed block">Conteúdos têm uma linguagem humana, acolhedora e escapam dos clichês da psicologia.</span>
-          </div>
-        </MDiv>
-        <MDiv className="flex items-start gap-4">
-          <div className="w-10 h-10 rounded-full bg-bege/15 flex items-center justify-center shrink-0">
-            <AlertCircle size={20} className="text-bege" />
-          </div>
-          <div>
-            <strong className="block font-medium mb-1 text-lg">Constância frágil</strong>
-            <span className="text-sm text-off-white/80 leading-relaxed block">Vídeos ficam guardados no rolo da câmera por falta de estrutura de um calendário editorial.</span>
-          </div>
-        </MDiv>
+        
+        <div className="space-y-6 drop-shadow-sm">
+          <MDiv className="flex items-start gap-4">
+            <div className="w-10 h-10 rounded-full bg-verde-sage/30 flex items-center justify-center shrink-0">
+              <CheckCircle2 size={20} className="text-verde-sage text-shadow" />
+            </div>
+            <div>
+              <strong className="block font-medium mb-1 truncate text-lg">Paleta intuitiva e elegante</strong>
+              <span className="text-sm text-off-white/80 leading-relaxed block">Você já usa verde oliva, bege e marrom nativamente. O sentimento transmitido já está certo.</span>
+            </div>
+          </MDiv>
+          <MDiv className="flex items-start gap-4">
+            <div className="w-10 h-10 rounded-full bg-verde-sage/30 flex items-center justify-center shrink-0">
+              <CheckCircle2 size={20} className="text-verde-sage" />
+            </div>
+            <div>
+              <strong className="block font-medium mb-1 text-lg">Voz autêntica e conectada</strong>
+              <span className="text-sm text-off-white/80 leading-relaxed block">Conteúdos têm uma linguagem humana, acolhedora e escapam dos clichês da psicologia.</span>
+            </div>
+          </MDiv>
+          <MDiv className="flex items-start gap-4">
+            <div className="w-10 h-10 rounded-full bg-bege/15 flex items-center justify-center shrink-0 border border-bege/20">
+              <AlertCircle size={20} className="text-bege" />
+            </div>
+            <div>
+              <strong className="block font-medium mb-1 text-lg">Constância frágil</strong>
+              <span className="text-sm text-off-white/80 leading-relaxed block">Vídeos ficam guardados no rolo da câmera por falta de estrutura de um calendário editorial.</span>
+            </div>
+          </MDiv>
+        </div>
       </div>
     </div>
     
-    <div className="w-full md:w-1/2 bg-off-white p-8 sm:p-12 lg:p-24 flex flex-col justify-center pt-8 pb-32 md:py-24 overflow-y-visible">
-      <MDiv className="text-[10px] tracking-[0.3em] uppercase text-marrom mb-4">Oportunidades</MDiv>
+    <div className="w-full md:w-1/2 bg-off-white p-8 sm:p-12 lg:p-24 flex flex-col justify-center pt-8 pb-32 md:py-24 overflow-y-visible relative">
+      <MDiv className="text-[10px] tracking-[0.3em] uppercase text-marrom mb-4 relative z-10">Oportunidades</MDiv>
       <MDiv className="font-display text-3xl sm:text-4xl lg:text-5xl font-light leading-tight mb-10 text-marrom-escuro">
         O que<br/>vamos mudar
       </MDiv>
@@ -121,18 +145,29 @@ export const Slide2 = () => (
 );
 
 export const Slide3 = () => (
-  <SlideContainer className="bg-bege p-8 sm:p-12 lg:p-24 flex-col justify-start items-start overflow-y-auto">
-    <MDiv className="mb-12 mt-12 sm:mt-0">
-      <div className="text-[10px] tracking-[0.3em] uppercase text-marrom mb-3">Identidade Visual Melhorada</div>
-      <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-light text-marrom-escuro leading-tight mb-2">
-        A evolução da marca <em className="text-verde">Ryna Hayashi</em>
-      </h2>
-      <p className="max-w-2xl text-marrom">
-        Uma transição do antigo logo roxo vibrante para uma estética line-art mais elegante, natural e alinhada às cores que você já utiliza com sucesso nos seus posts de carrossel.
-      </p>
-    </MDiv>
-    
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
+  <SlideContainer className="bg-bege p-8 sm:p-12 lg:p-24 flex-col justify-start items-start overflow-y-auto relative">
+    <div className="absolute inset-0 pointer-events-none z-0">
+      <div className="absolute inset-0 bg-bege/95 z-10 mix-blend-overlay"/>
+      <img src="https://i.ibb.co/8gwCR0n7/ryna-ensaio-novo-3.png" className="w-full h-full object-cover opacity-15 grayscale mix-blend-multiply" />
+    </div>
+
+    <div className="relative z-10 w-full">
+      <MDiv className="mb-12 mt-12 sm:mt-0 flex flex-col lg:flex-row lg:justify-between lg:items-end gap-6">
+        <div>
+          <div className="text-[10px] tracking-[0.3em] uppercase text-marrom mb-3">Identidade Visual Melhorada</div>
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-light text-marrom-escuro leading-tight mb-2">
+            A evolução da marca <em className="text-verde">Ryna Hayashi</em>
+          </h2>
+          <p className="max-w-2xl text-marrom">
+            Uma transição do antigo logo roxo vibrante para uma estética line-art mais elegante, natural e alinhada às cores que você já utiliza com sucesso nos seus posts de carrossel.
+          </p>
+        </div>
+        <div className="hidden lg:block shrink-0 w-48 h-64 rounded-2xl overflow-hidden shadow-[0_20px_50px_-15px_rgba(74,60,46,0.3)] border-4 border-off-white rotate-3 group self-end">
+           <img src="https://i.ibb.co/63RW2yH/ryna-ensaio-novo-5.png" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+        </div>
+      </MDiv>
+      
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-6xl">
       <MDiv className="bg-off-white rounded-2xl p-8 relative overflow-hidden border-t-4 border-verde shadow-sm">
         <h3 className="font-display text-2xl font-light text-marrom-escuro mb-6">Conceito do Novo Logo</h3>
         <div className="bg-bege/50 rounded-xl p-4 flex items-center gap-4 mb-4 border border-marrom/10">
@@ -189,12 +224,20 @@ export const Slide3 = () => (
         </div>
       </MDiv>
     </div>
+    </div>
   </SlideContainer>
 );
 
 export const Slide4 = () => (
-  <SlideContainer className="bg-marrom-escuro p-8 sm:p-12 lg:p-24 flex-col justify-start sm:justify-center overflow-y-auto">
-    <MDiv className="mb-12 max-w-2xl mt-12 sm:mt-0">
+  <SlideContainer className="bg-marrom-escuro p-8 sm:p-12 lg:p-24 flex-col justify-start sm:justify-center overflow-y-auto relative">
+    <div className="absolute top-0 right-0 w-full md:w-2/3 h-full z-0 pointer-events-none">
+      <div className="absolute inset-0 bg-gradient-to-r from-marrom-escuro via-marrom-escuro/80 to-transparent md:to-marrom-escuro/20 z-10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-marrom-escuro via-transparent to-marrom-escuro z-10 opacity-70" />
+      <img src="https://i.ibb.co/pBv2HDH1/ryna-ensaio-novo-4.png" className="w-full h-full object-cover object-top opacity-50 mix-blend-luminosity grayscale" />
+    </div>
+
+    <div className="relative z-10 w-full">
+      <MDiv className="mb-12 max-w-2xl mt-12 sm:mt-0">
       <div className="text-[10px] tracking-[0.3em] uppercase text-verde-sage mb-3">Estratégia Digital</div>
       <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-light text-off-white leading-tight mb-2">
         O lugar certo para<br/><em className="text-verde-sage">cada conteúdo</em>
@@ -260,36 +303,44 @@ export const Slide4 = () => (
         </div>
       </MDiv>
     </div>
+    </div>
   </SlideContainer>
 );
 
 export const Slide5 = () => (
-  <SlideContainer className="bg-off-white text-marrom-escuro flex-col md:flex-row h-full overflow-y-auto md:overflow-hidden">
-    <div className="w-full md:w-1/2 bg-marrom text-off-white p-8 sm:p-12 lg:p-24 flex flex-col justify-center">
-      <MDiv className="font-display text-8xl font-light text-white/10 leading-none -mb-4">05</MDiv>
-      <MDiv className="text-[10px] tracking-[0.3em] uppercase text-bege/70 mb-4">Planejamento Temático</MDiv>
-      <MDiv className="font-display text-3xl sm:text-4xl lg:text-5xl font-light leading-tight mb-12 text-bege">
-        Construindo sua<br/>Autoridade
-      </MDiv>
+  <SlideContainer className="bg-off-white text-marrom-escuro flex-col md:flex-row h-full overflow-y-auto md:overflow-hidden relative">
+    <div className="w-full md:w-1/2 bg-marrom text-off-white p-8 sm:p-12 lg:p-24 flex flex-col justify-center relative overflow-hidden">
+      <img src="https://i.ibb.co/VcLTxQ3G/ryna-ensaio-novo-6.png" className="absolute inset-0 w-full h-full object-cover mix-blend-overlay opacity-20 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-t from-marrom via-transparent to-transparent z-0 opacity-50 pointer-events-none"/>
       
-      <div className="space-y-6">
-        {[
-          { num: "01", title: "A Prática Clínica", desc: "Desmistificar o processo terapêutico, clarificar a ACP." },
-          { num: "02", title: "Escuta Interna", desc: "Reflexões sobre emoções, autoconhecimento e pausas." },
-          { num: "03", title: "A Psicóloga", desc: "Humanização. Mostre a Ryna real. Gera empatia veloz." },
-          { num: "04", title: "Próximo Passo", desc: "Conteúdos que sutilmente convidam para o agendamento." },
-        ].map((pillar, idx) => (
-          <MDiv key={idx} className="pb-4 border-b border-white/10 last:border-0 last:pb-0">
-            <div className="font-display text-sm italic text-verde-sage mb-1">Pilar {pillar.num}</div>
-            <div className="font-medium text-[15px] mb-1">{pillar.title}</div>
-            <div className="text-sm text-off-white/60 leading-relaxed">{pillar.desc}</div>
-          </MDiv>
-        ))}
+      <div className="relative z-10">
+        <MDiv className="font-display text-8xl font-light text-white/10 leading-none -mb-4">05</MDiv>
+        <MDiv className="text-[10px] tracking-[0.3em] uppercase text-bege/70 mb-4">Planejamento Temático</MDiv>
+        <MDiv className="font-display text-3xl sm:text-4xl lg:text-5xl font-light leading-tight mb-12 text-bege drop-shadow-md">
+          Construindo sua<br/>Autoridade
+        </MDiv>
+        
+        <div className="space-y-6">
+          {[
+            { num: "01", title: "A Prática Clínica", desc: "Desmistificar o processo terapêutico, clarificar a ACP." },
+            { num: "02", title: "Escuta Interna", desc: "Reflexões sobre emoções, autoconhecimento e pausas." },
+            { num: "03", title: "A Psicóloga", desc: "Humanização. Mostre a Ryna real. Gera empatia veloz." },
+            { num: "04", title: "Próximo Passo", desc: "Conteúdos que sutilmente convidam para o agendamento." },
+          ].map((pillar, idx) => (
+            <MDiv key={idx} className="pb-4 border-b border-white/10 last:border-0 last:pb-0 relative z-20">
+              <div className="font-display text-sm italic text-verde-sage mb-1 drop-shadow-sm">Pilar {pillar.num}</div>
+              <div className="font-medium text-[15px] mb-1 drop-shadow-sm">{pillar.title}</div>
+              <div className="text-sm text-off-white/80 leading-relaxed drop-shadow-md">{pillar.desc}</div>
+            </MDiv>
+          ))}
+        </div>
       </div>
     </div>
     
-    <div className="w-full md:w-1/2 bg-off-white p-8 sm:p-12 lg:p-24 flex flex-col justify-center pb-32 md:pb-24 pt-8">
-      <MDiv className="text-[10px] tracking-[0.3em] uppercase text-marrom mb-4">Imediatismo e Ação</MDiv>
+    <div className="w-full md:w-1/2 bg-off-white p-8 sm:p-12 lg:p-24 flex flex-col justify-center pb-32 md:pb-24 pt-8 relative overflow-hidden">
+      <img src="https://i.ibb.co/tpHR0YvN/ryna-ensaio-novo-8.png" className="absolute bottom-[-10%] right-[-20%] w-[120%] rotate-[10deg] opacity-[0.04] grayscale pointer-events-none" />
+      <div className="relative z-10">
+        <MDiv className="text-[10px] tracking-[0.3em] uppercase text-marrom mb-4">Imediatismo e Ação</MDiv>
       <MDiv className="font-display text-2xl sm:text-3xl font-light leading-tight mb-10 text-marrom-escuro">
         Ideias Prontas (Semana 1)
       </MDiv>
@@ -310,22 +361,29 @@ export const Slide5 = () => (
         ))}
       </div>
     </div>
+    </div>
   </SlideContainer>
 );
 
 export const Slide6 = () => (
-  <SlideContainer className="bg-bege p-8 sm:p-12 lg:p-24 flex-col justify-start sm:justify-center items-center text-center overflow-y-auto">
-    <MDiv className="mb-10 text-center w-full max-w-4xl mt-12 sm:mt-0">
-      <div className="text-[10px] tracking-[0.3em] uppercase text-marrom mb-4">Experiência Digital (Wireframe)</div>
-      <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-light text-marrom-escuro leading-tight">
-        Seu porto seguro, <em className="text-verde">o Website</em>
-      </h2>
-      <p className="max-w-2xl mx-auto text-marrom mt-4 text-sm">
-        O design refletirá a mesma paz que seu feed do Instagram, guiando pacientes suavemente até o contato.
-      </p>
-    </MDiv>
+  <SlideContainer className="bg-bege p-8 sm:p-12 lg:p-24 flex-col justify-start sm:justify-center items-center text-center overflow-y-auto relative">
     
-    <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    {/* Floating images for visual appeal */}
+    <img src="https://i.ibb.co/JjjjTc3P/ryna-ensaio-novo-7.png" className="absolute top-12 lg:top-24 left-12 w-40 h-56 md:w-48 md:h-64 rounded-2xl object-cover shadow-[0_20px_50px_-15px_rgba(74,60,46,0.3)] -rotate-6 opacity-40 hover:opacity-100 hover:rotate-0 hover:z-50 transition-all duration-700 hidden md:block border-8 border-off-white" />
+    <img src="https://i.ibb.co/wFZk15Gy/ryna-ensaio-novo-9.png" className="absolute bottom-12 lg:bottom-24 right-12 w-40 h-40 md:w-56 md:h-56 rounded-full object-cover shadow-[0_20px_50px_-15px_rgba(74,60,46,0.3)] rotate-6 opacity-40 hover:opacity-100 hover:rotate-0 hover:z-50 transition-all duration-700 hidden md:block border-8 border-off-white" />
+
+    <div className="relative z-10 w-full flex flex-col items-center">
+      <MDiv className="mb-10 text-center w-full max-w-4xl mt-12 sm:mt-0">
+        <div className="text-[10px] tracking-[0.3em] uppercase text-marrom mb-4">Experiência Digital (Wireframe)</div>
+        <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-light text-marrom-escuro leading-tight">
+          Seu porto seguro, <em className="text-verde">o Website</em>
+        </h2>
+        <p className="max-w-2xl mx-auto text-marrom mt-4 text-sm">
+          O design refletirá a mesma paz que seu feed do Instagram, guiando pacientes suavemente até o contato.
+        </p>
+      </MDiv>
+      
+      <div className="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
       {/* Wireframe UI */}
       <MDiv className="bg-off-white rounded-2xl overflow-hidden shadow-2xl border border-black/5 ring-1 ring-white">
         <div className="h-10 bg-verde flex items-center px-4 gap-2 border-b border-black/10">
@@ -375,14 +433,20 @@ export const Slide6 = () => (
         ))}
       </div>
     </div>
+    </div>
   </SlideContainer>
 );
 
 export const Slide7 = () => (
   <SlideContainer className="bg-marrom-escuro p-8 sm:p-12 lg:p-24 flex-col justify-start sm:justify-center relative overflow-y-auto overflow-x-hidden">
-    <div className="absolute -bottom-40 -right-40 w-96 h-96 rounded-full bg-[radial-gradient(circle,rgba(92,107,71,0.25)_0%,transparent_70%)] blur-2xl pointer-events-none" />
+    <div className="absolute inset-0 pointer-events-none z-0">
+      <div className="absolute inset-0 bg-gradient-to-r from-marrom-escuro via-marrom-escuro/80 to-marrom-escuro/60 z-10 mix-blend-multiply" />
+      <img src="https://i.ibb.co/Fkxpj9Lt/ryna-ensaio-novo-1.png" className="w-full h-full object-cover object-[center_30%] opacity-[0.15] grayscale mix-blend-screen mix-blend-overlay" />
+    </div>
+    <div className="absolute -bottom-40 -right-40 w-96 h-96 rounded-full bg-[radial-gradient(circle,rgba(92,107,71,0.25)_0%,transparent_70%)] blur-2xl pointer-events-none z-0" />
     
-    <MDiv className="mb-8 sm:mb-12 max-w-2xl relative z-10 mt-12 sm:mt-0">
+    <div className="relative z-10 flex flex-col items-center sm:items-start w-full">
+      <MDiv className="mb-8 sm:mb-12 max-w-2xl mt-12 sm:mt-0 w-full">
       <div className="text-[10px] tracking-[0.3em] uppercase text-verde-sage mb-3">Modelos de Parceria</div>
       <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-light text-off-white leading-tight">
         Opções p/ <em className="text-verde-sage">acelerar</em>
@@ -430,6 +494,7 @@ export const Slide7 = () => (
         </ul>
       </MDiv>
     </div>
+    </div>
   </SlideContainer>
 );
 
@@ -439,31 +504,45 @@ export const Slide8 = () => (
       RH
     </div>
     
-    <div className="relative z-10 w-full max-w-5xl mt-12 sm:mt-0 pb-32 sm:pb-0">
-      <MDiv className="text-[10px] tracking-[0.3em] uppercase text-bege/60 mb-6">Cronograma & Início</MDiv>
-      <MDiv className="font-display text-4xl sm:text-5xl lg:text-[4.5rem] font-light leading-[1.1] mb-6">
-        Começamos <em className="italic">quando<br/>você quiser.</em>
-      </MDiv>
-      <MDiv className="text-lg text-bege max-w-xl font-light leading-relaxed mb-16">
-        A essência, o estilo e o talento clínico você já construiu. Só falta orquestrar essa base técnica em um funil de conversão sólido.
-      </MDiv>
-      
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl">
-        {[
-          { num: "01", title: "Aprovação & Briefing", desc: "A escolha do modelo e 30 mins para alinhar detalhes finos e login." },
-          { num: "02", title: "Sistematização da Marca", desc: "Entrega do novo logo e templates Canva em 7 a 10 dias úteis." },
-          { num: "03", title: "Layout do Website", desc: "Criação paralela do site integrado (se incluso) para aprovação." },
-          { num: "04", title: "Entrega Viva", desc: "Postagens testadas, website no ar, link na bio funcionando." }
-        ].map((step, i) => (
-          <MDiv key={i} className="flex gap-5 bg-white/5 rounded-2xl p-6 backdrop-blur-sm border border-white/10">
-            <span className="font-display text-4xl font-light text-white/20 leading-none">{step.num}</span>
-            <div>
-              <strong className="block text-[15px] font-medium mb-1.5">{step.title}</strong>
-              <p className="text-sm text-bege/70 leading-relaxed font-light">{step.desc}</p>
-            </div>
-          </MDiv>
-        ))}
+    <div className="relative z-10 w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 mt-12 sm:mt-0 pb-32 sm:pb-0">
+      <div className="w-full md:w-1/2 flex flex-col items-start text-left">
+        <MDiv className="text-[10px] tracking-[0.3em] uppercase text-bege/60 mb-6">Cronograma & Início</MDiv>
+        <MDiv className="font-display text-4xl sm:text-5xl lg:text-[4.5rem] font-light leading-[1.1] mb-6">
+          Começamos <em className="italic">quando<br/>você quiser.</em>
+        </MDiv>
+        <MDiv className="text-lg text-bege max-w-xl font-light leading-relaxed mb-12 sm:mb-16">
+          A essência, o estilo e o talento clínico você já construiu. Só falta orquestrar essa base técnica em um funil de conversão sólido.
+        </MDiv>
+        
+        <div className="grid grid-cols-1 gap-4 max-w-xl">
+          {[
+            { num: "01", title: "Aprovação & Briefing", desc: "A escolha do modelo e 30 mins para alinhar detalhes finos e login." },
+            { num: "02", title: "Sistematização da Marca", desc: "Entrega do novo logo e templates Canva em 7 a 10 dias úteis." },
+            { num: "03", title: "Layout do Website", desc: "Criação paralela do site integrado (se incluso) para aprovação." },
+            { num: "04", title: "Entrega Viva", desc: "Postagens testadas, website no ar, link na bio funcionando." }
+          ].map((step, i) => (
+            <MDiv key={i} className="flex gap-5 bg-white/5 rounded-2xl p-5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-colors">
+              <span className="font-display text-3xl font-light text-white/20 leading-none">{step.num}</span>
+              <div>
+                <strong className="block text-[14px] md:text-[15px] font-medium mb-1">{step.title}</strong>
+                <p className="text-[13px] md:text-sm text-bege/70 leading-relaxed font-light">{step.desc}</p>
+              </div>
+            </MDiv>
+          ))}
+        </div>
       </div>
+
+      <MDiv className="w-full md:w-1/2 flex justify-center md:justify-end shrink-0 mt-8 md:mt-0">
+        <div className="relative w-64 h-80 sm:w-80 sm:h-[32rem] lg:w-[28rem] lg:h-[40rem] rounded-full overflow-hidden border border-white/10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8)] group">
+          <div className="absolute inset-0 bg-gradient-to-b from-marrom-escuro/20 to-verde/60 z-10 mix-blend-multiply opacity-50 group-hover:opacity-20 transition-opacity duration-700 pointer-events-none" />
+          <div className="absolute inset-0 rounded-full shadow-[inset_0_1px_0_rgba(255,255,255,0.2)] z-20 pointer-events-none" />
+          <img 
+            src="https://i.ibb.co/VcqkvF3X/ryna02.png" 
+            alt="Ryna Hayashi" 
+            className="w-full h-full object-cover object-[center_30%] md:object-[center_20%] grayscale-[20%] group-hover:scale-105 group-hover:grayscale-0 transition-all duration-1000 ease-out"
+          />
+        </div>
+      </MDiv>
     </div>
   </SlideContainer>
 );
@@ -522,6 +601,10 @@ export const SlideConcepts = () => {
 
   return (
     <SlideContainer className="bg-bege p-8 lg:p-16 flex-col justify-start items-center overflow-y-auto w-full h-full relative">
+      <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden">
+        <img src="https://i.ibb.co/vCZc6ysC/ryna-ensaio-novo-10.png" className="w-[150%] h-[150%] object-cover opacity-[0.03] mix-blend-multiply filter blur-sm -translate-x-1/4 -translate-y-1/4" />
+      </div>
+      
       <AnimatePresence>
         {zoomedConcept && (
           <motion.div 
