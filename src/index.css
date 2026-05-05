@@ -21,3 +21,14 @@ body {
   color: var(--color-off-white);
   overflow: hidden;
 }
+
+@layer utilities {
+  .hidden-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hidden-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+

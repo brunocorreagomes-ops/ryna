@@ -1,5 +1,5 @@
-import { ReactNode } from "react";
-import { motion } from "motion/react";
+import { ReactNode, useState } from "react";
+import { motion, AnimatePresence } from "motion/react";
 import { CheckCircle2, AlertCircle } from "lucide-react";
 import { Logo } from "./Logo";
 
@@ -34,16 +34,16 @@ const MDiv = ({ children, className = "", ...props }: any) => (
 // -- Individual Slides --
 
 export const Slide1 = () => (
-  <SlideContainer className="relative bg-marrom-escuro overflow-hidden flex-col justify-center px-16 lg:px-24">
+  <SlideContainer className="relative bg-marrom-escuro overflow-hidden flex-col justify-center px-6 sm:px-12 lg:px-24">
     <div className="absolute inset-0 bg-[radial-gradient(ellipse_60%_80%_at_80%_50%,rgba(92,107,71,0.25)_0%,transparent_70%),radial-gradient(ellipse_40%_60%_at_10%_80%,rgba(181,196,161,0.1)_0%,transparent_60%)]" />
     <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-verde opacity-10 clip-diagonal" />
     <div className="absolute right-0 top-0 bottom-0 w-1 bg-gradient-to-b from-verde-sage to-transparent" />
     
-    <div className="relative z-10 w-full max-w-5xl">
+    <div className="relative z-10 w-full max-w-5xl items-center sm:items-start text-center sm:text-left flex flex-col">
       <MDiv className="text-xs uppercase tracking-[0.25em] text-verde-sage mb-8">
         Proposta de Comunicação & Estratégia de Marca
       </MDiv>
-      <MDiv className="font-display text-7xl md:text-8xl lg:text-[7rem] font-light leading-none mb-4 text-off-white">
+      <MDiv className="font-display text-5xl sm:text-7xl md:text-8xl lg:text-[7rem] font-light leading-none mb-4 text-off-white">
         Ryna<br/><em className="text-verde-sage italic">Hayashi</em>
       </MDiv>
       <MDiv className="font-display text-2xl font-light text-bege-escuro mb-12 tracking-wide">
@@ -58,11 +58,11 @@ export const Slide1 = () => (
 );
 
 export const Slide2 = () => (
-  <SlideContainer className="bg-off-white text-marrom-escuro flex-col md:flex-row">
-    <div className="w-full md:w-1/2 bg-verde text-off-white p-12 lg:p-24 flex flex-col justify-center">
+  <SlideContainer className="bg-off-white text-marrom-escuro flex-col md:flex-row h-full overflow-y-auto md:overflow-hidden">
+    <div className="w-full md:w-1/2 bg-verde text-off-white p-8 sm:p-12 lg:p-24 flex flex-col justify-center pb-12 sm:pb-12">
       <MDiv className="font-display text-8xl font-light text-white/10 leading-none -mb-4">02</MDiv>
       <MDiv className="text-[10px] tracking-[0.3em] uppercase text-verde-sage mb-4">Diagnóstico</MDiv>
-      <MDiv className="font-display text-5xl lg:text-6xl font-light leading-tight mb-12">
+      <MDiv className="font-display text-4xl sm:text-5xl lg:text-6xl font-light leading-tight mb-12">
         Onde<br/>você está<br/>hoje
       </MDiv>
       
@@ -97,9 +97,9 @@ export const Slide2 = () => (
       </div>
     </div>
     
-    <div className="w-full md:w-1/2 bg-off-white p-12 lg:p-24 flex flex-col justify-center">
+    <div className="w-full md:w-1/2 bg-off-white p-8 sm:p-12 lg:p-24 flex flex-col justify-center pt-8 pb-32 md:py-24 overflow-y-visible">
       <MDiv className="text-[10px] tracking-[0.3em] uppercase text-marrom mb-4">Oportunidades</MDiv>
-      <MDiv className="font-display text-4xl lg:text-5xl font-light leading-tight mb-10 text-marrom-escuro">
+      <MDiv className="font-display text-3xl sm:text-4xl lg:text-5xl font-light leading-tight mb-10 text-marrom-escuro">
         O que<br/>vamos mudar
       </MDiv>
       
@@ -121,10 +121,10 @@ export const Slide2 = () => (
 );
 
 export const Slide3 = () => (
-  <SlideContainer className="bg-bege p-12 lg:p-24 flex-col justify-center items-start">
-    <MDiv className="mb-12">
+  <SlideContainer className="bg-bege p-8 sm:p-12 lg:p-24 flex-col justify-start items-start overflow-y-auto">
+    <MDiv className="mb-12 mt-12 sm:mt-0">
       <div className="text-[10px] tracking-[0.3em] uppercase text-marrom mb-3">Identidade Visual Melhorada</div>
-      <h2 className="font-display text-4xl lg:text-5xl font-light text-marrom-escuro leading-tight mb-2">
+      <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-light text-marrom-escuro leading-tight mb-2">
         A evolução da marca <em className="text-verde">Ryna Hayashi</em>
       </h2>
       <p className="max-w-2xl text-marrom">
@@ -193,10 +193,10 @@ export const Slide3 = () => (
 );
 
 export const Slide4 = () => (
-  <SlideContainer className="bg-marrom-escuro p-12 lg:p-24 flex-col justify-center">
-    <MDiv className="mb-12 max-w-2xl">
+  <SlideContainer className="bg-marrom-escuro p-8 sm:p-12 lg:p-24 flex-col justify-start sm:justify-center overflow-y-auto">
+    <MDiv className="mb-12 max-w-2xl mt-12 sm:mt-0">
       <div className="text-[10px] tracking-[0.3em] uppercase text-verde-sage mb-3">Estratégia Digital</div>
-      <h2 className="font-display text-4xl lg:text-5xl font-light text-off-white leading-tight mb-2">
+      <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-light text-off-white leading-tight mb-2">
         O lugar certo para<br/><em className="text-verde-sage">cada conteúdo</em>
       </h2>
       <p className="text-bege/60">Uma cascata de conversão que elimina o retrabalho.</p>
@@ -264,11 +264,11 @@ export const Slide4 = () => (
 );
 
 export const Slide5 = () => (
-  <SlideContainer className="bg-off-white text-marrom-escuro flex-col md:flex-row">
-    <div className="w-full md:w-1/2 bg-marrom text-off-white p-12 lg:p-24 flex flex-col justify-center">
+  <SlideContainer className="bg-off-white text-marrom-escuro flex-col md:flex-row h-full overflow-y-auto md:overflow-hidden">
+    <div className="w-full md:w-1/2 bg-marrom text-off-white p-8 sm:p-12 lg:p-24 flex flex-col justify-center">
       <MDiv className="font-display text-8xl font-light text-white/10 leading-none -mb-4">05</MDiv>
       <MDiv className="text-[10px] tracking-[0.3em] uppercase text-bege/70 mb-4">Planejamento Temático</MDiv>
-      <MDiv className="font-display text-4xl lg:text-5xl font-light leading-tight mb-12 text-bege">
+      <MDiv className="font-display text-3xl sm:text-4xl lg:text-5xl font-light leading-tight mb-12 text-bege">
         Construindo sua<br/>Autoridade
       </MDiv>
       
@@ -288,9 +288,9 @@ export const Slide5 = () => (
       </div>
     </div>
     
-    <div className="w-full md:w-1/2 bg-off-white p-12 lg:p-24 flex flex-col justify-center">
+    <div className="w-full md:w-1/2 bg-off-white p-8 sm:p-12 lg:p-24 flex flex-col justify-center pb-32 md:pb-24 pt-8">
       <MDiv className="text-[10px] tracking-[0.3em] uppercase text-marrom mb-4">Imediatismo e Ação</MDiv>
-      <MDiv className="font-display text-3xl font-light leading-tight mb-10 text-marrom-escuro">
+      <MDiv className="font-display text-2xl sm:text-3xl font-light leading-tight mb-10 text-marrom-escuro">
         Ideias Prontas (Semana 1)
       </MDiv>
       
@@ -314,10 +314,10 @@ export const Slide5 = () => (
 );
 
 export const Slide6 = () => (
-  <SlideContainer className="bg-bege p-12 lg:p-24 flex-col justify-center items-center text-center">
-    <MDiv className="mb-10 text-center w-full max-w-4xl">
+  <SlideContainer className="bg-bege p-8 sm:p-12 lg:p-24 flex-col justify-start sm:justify-center items-center text-center overflow-y-auto">
+    <MDiv className="mb-10 text-center w-full max-w-4xl mt-12 sm:mt-0">
       <div className="text-[10px] tracking-[0.3em] uppercase text-marrom mb-4">Experiência Digital (Wireframe)</div>
-      <h2 className="font-display text-4xl lg:text-5xl font-light text-marrom-escuro leading-tight">
+      <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-light text-marrom-escuro leading-tight">
         Seu porto seguro, <em className="text-verde">o Website</em>
       </h2>
       <p className="max-w-2xl mx-auto text-marrom mt-4 text-sm">
@@ -379,17 +379,17 @@ export const Slide6 = () => (
 );
 
 export const Slide7 = () => (
-  <SlideContainer className="bg-marrom-escuro p-12 lg:p-24 flex-col justify-center relative overflow-hidden">
+  <SlideContainer className="bg-marrom-escuro p-8 sm:p-12 lg:p-24 flex-col justify-start sm:justify-center relative overflow-y-auto overflow-x-hidden">
     <div className="absolute -bottom-40 -right-40 w-96 h-96 rounded-full bg-[radial-gradient(circle,rgba(92,107,71,0.25)_0%,transparent_70%)] blur-2xl pointer-events-none" />
     
-    <MDiv className="mb-12 max-w-2xl relative z-10">
+    <MDiv className="mb-8 sm:mb-12 max-w-2xl relative z-10 mt-12 sm:mt-0">
       <div className="text-[10px] tracking-[0.3em] uppercase text-verde-sage mb-3">Modelos de Parceria</div>
-      <h2 className="font-display text-4xl lg:text-5xl font-light text-off-white leading-tight">
+      <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-light text-off-white leading-tight">
         Opções p/ <em className="text-verde-sage">acelerar</em>
       </h2>
     </MDiv>
     
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl relative z-10">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl relative z-10 pb-32 sm:pb-0">
       <MDiv className="bg-white/5 border border-white/10 rounded-3xl p-8 hover:-translate-y-1 transition-transform">
         <div className="text-[10px] tracking-widest text-verde-sage uppercase font-bold mb-3">Pacote 01</div>
         <h3 className="font-display text-3xl text-off-white font-light mb-2">Fundação<br/>Marca Digital</h3>
@@ -434,14 +434,14 @@ export const Slide7 = () => (
 );
 
 export const Slide8 = () => (
-  <SlideContainer className="bg-verde text-off-white p-12 lg:p-24 flex-col justify-center overflow-hidden relative">
-    <div className="absolute right-[-5%] bottom-[-15%] font-display font-light italic text-[35rem] leading-none text-white opacity-5 select-none pointer-events-none">
+  <SlideContainer className="bg-verde text-off-white p-8 sm:p-12 lg:p-24 flex-col justify-start sm:justify-center overflow-y-auto relative">
+    <div className="absolute right-[-5%] bottom-[-15%] font-display font-light italic text-[20rem] sm:text-[35rem] leading-none text-white opacity-5 select-none pointer-events-none">
       RH
     </div>
     
-    <div className="relative z-10 w-full max-w-5xl">
+    <div className="relative z-10 w-full max-w-5xl mt-12 sm:mt-0 pb-32 sm:pb-0">
       <MDiv className="text-[10px] tracking-[0.3em] uppercase text-bege/60 mb-6">Cronograma & Início</MDiv>
-      <MDiv className="font-display text-5xl lg:text-[4.5rem] font-light leading-[1.1] mb-6">
+      <MDiv className="font-display text-4xl sm:text-5xl lg:text-[4.5rem] font-light leading-[1.1] mb-6">
         Começamos <em className="italic">quando<br/>você quiser.</em>
       </MDiv>
       <MDiv className="text-lg text-bege max-w-xl font-light leading-relaxed mb-16">
@@ -468,8 +468,8 @@ export const Slide8 = () => (
   </SlideContainer>
 );
 
-const Concept1Logo = () => (
-  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-[4.5rem] h-[4.5rem] text-[#5C6B47] drop-shadow-sm transition-transform hover:scale-105 duration-300">
+const Concept1Logo = ({ className = "w-[4.5rem] h-[4.5rem]" }: { className?: string }) => (
+  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="1.5" className={`${className} text-[#5C6B47] drop-shadow-sm transition-transform duration-300`}>
     <circle cx="50" cy="50" r="44" strokeWidth="0.75" strokeDasharray="4 6" opacity="0.4" />
     <circle cx="50" cy="50" r="38" strokeWidth="0.5" opacity="0.15" />
     {/* Continuous fluid wings resembling both leaves and a butterfly */}
@@ -491,25 +491,94 @@ const Concept1Logo = () => (
   </svg>
 );
 
-const Concept2Logo = () => (
-  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="2" className="w-[4.5rem] h-[4.5rem] text-[#C27A62] drop-shadow-sm">
+const Concept2Logo = ({ className = "w-[4.5rem] h-[4.5rem]" }: { className?: string }) => (
+  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="2" className={`${className} text-[#C27A62] drop-shadow-sm transition-transform duration-300`}>
     <path d="M 38 82 C 38 72 38 32 38 32 C 38 22 62 22 62 36 C 62 48 48 50 48 50 C 58 50 68 58 72 82" strokeLinecap="round" strokeLinejoin="round" />
     <circle cx="50" cy="50" r="44" strokeWidth="0.5" opacity="0.2" />
     <path d="M 24 50 C 32 32 68 32 76 50 C 68 68 32 68 24 50 Z" strokeWidth="0.5" opacity="0.4" />
   </svg>
 );
 
-const Concept3Logo = () => (
-  <svg viewBox="0 0 100 100" fill="none" className="w-[4.5rem] h-[4.5rem] drop-shadow-sm">
+const Concept3Logo = ({ className = "w-[4.5rem] h-[4.5rem]" }: { className?: string }) => (
+  <svg viewBox="0 0 100 100" fill="none" className={`${className} drop-shadow-sm transition-transform duration-300`}>
     <path d="M 38 38 C 55 28 68 42 60 60 C 52 75 34 65 38 38 Z" fill="#6A828A" opacity="0.85" />
     <path d="M 62 38 C 75 48 72 70 55 75 C 38 80 46 32 62 38 Z" fill="#B4A89E" opacity="0.8" />
     <circle cx="50" cy="50" r="44" stroke="#4A3C2E" strokeWidth="1" opacity="0.4" strokeDasharray="12 4" strokeLinecap="round" fill="none" />
   </svg>
 );
 
-export const SlideConcepts = () => (
-  <SlideContainer className="bg-bege p-8 lg:p-16 flex-col justify-start items-center overflow-y-auto w-full h-full">
-    <MDiv className="mt-8 mb-8 text-center w-full max-w-4xl shrink-0">
+export const SlideConcepts = () => {
+  const [zoomedConcept, setZoomedConcept] = useState<number | null>(null);
+
+  const getZoomedContent = () => {
+    switch (zoomedConcept) {
+      case 1:
+        return (
+          <>
+            <motion.div layoutId="logo-1" className="w-48 h-48 sm:w-64 sm:h-64 mb-6">
+              <Concept1Logo className="w-full h-full" />
+            </motion.div>
+            <h3 className="font-display text-3xl text-marrom-escuro font-bold mb-2">01. O Voo Orgânico</h3>
+            <p className="text-marrom text-center text-sm max-w-sm mb-4">Evolução natural da borboleta atual. Simboliza metamorfose, crescimento seguro e o florescer humano.</p>
+          </>
+        );
+      case 2:
+        return (
+          <>
+            <motion.div layoutId="logo-2" className="w-48 h-48 sm:w-64 sm:h-64 mb-6">
+              <Concept2Logo className="w-full h-full" />
+            </motion.div>
+            <h3 className="font-display text-3xl text-marrom-escuro font-bold mb-2">02. A Jornada Fluida</h3>
+            <p className="text-marrom text-center text-sm max-w-sm mb-4">Um monograma 'R' construído por uma linha contínua ininterrupta, abraçada por formas orgânicas.</p>
+          </>
+        );
+      case 3:
+        return (
+          <>
+            <motion.div layoutId="logo-3" className="w-48 h-48 sm:w-64 sm:h-64 mb-6">
+              <Concept3Logo className="w-full h-full" />
+            </motion.div>
+            <h3 className="font-display text-3xl text-marrom-escuro font-bold mb-2">03. O Ponto Central</h3>
+            <p className="text-marrom text-center text-sm max-w-sm mb-4">Duas formas orgânicas sobrepostas criam um espaço comum, emolduradas pelo círculo imperfeito "Enso" da aceitação incondicional.</p>
+          </>
+        );
+      default:
+        return null;
+    }
+  };
+
+  return (
+    <SlideContainer className="bg-bege p-8 lg:p-16 flex-col justify-start items-center overflow-y-auto w-full h-full relative">
+      <AnimatePresence>
+        {zoomedConcept && (
+          <motion.div 
+            initial={{ opacity: 0 }} 
+            animate={{ opacity: 1 }} 
+            exit={{ opacity: 0 }} 
+            className="fixed inset-0 z-50 flex items-center justify-center bg-marrom-escuro/80 backdrop-blur-md cursor-zoom-out p-6"
+            onClick={() => setZoomedConcept(null)}
+          >
+            <motion.div 
+               initial={{ y: 20, opacity: 0 }} 
+               animate={{ y: 0, opacity: 1 }} 
+               exit={{ y: 20, opacity: 0 }}
+               transition={{ type: "spring", damping: 25, stiffness: 300 }}
+               className="bg-off-white p-12 rounded-[2.5rem] shadow-2xl flex flex-col items-center max-w-lg cursor-default border border-black/5"
+               onClick={(e) => e.stopPropagation()}
+            >
+               {getZoomedContent()}
+               <button 
+                  onClick={() => setZoomedConcept(null)}
+                  className="mt-4 text-xs text-marrom uppercase tracking-widest font-bold opacity-60 hover:opacity-100 transition-opacity bg-black/5 px-6 py-3 rounded-full"
+                >
+                  Fechar
+               </button>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <MDiv className="mt-8 mb-8 text-center w-full max-w-4xl shrink-0">
       <div className="text-[10px] tracking-[0.3em] uppercase text-marrom mb-3">Expansão de Identidade Visual</div>
       <h2 className="font-display text-4xl lg:text-5xl font-light text-marrom-escuro leading-tight mb-2">
         3 Conceitos de <em className="text-verde">Marca</em>
@@ -520,8 +589,10 @@ export const SlideConcepts = () => (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 w-full max-w-[85rem] pb-24 px-4 h-auto min-h-0">
        
       <MDiv className="bg-off-white rounded-3xl p-8 shadow-[0_10px_40px_-15px_rgba(74,60,46,0.1)] border-t-[6px] border-[#5C6B47] flex flex-col relative overflow-hidden transition-transform hover:-translate-y-1">
-        <div className="flex justify-center mb-6 pt-4">
-          <Concept1Logo />
+        <div className="flex justify-center mb-6 pt-4 cursor-zoom-in" onClick={() => setZoomedConcept(1)}>
+          <motion.div layoutId="logo-1" className="hover:scale-105 transition-transform duration-300">
+            <Concept1Logo />
+          </motion.div>
         </div>
         <h3 className="font-display text-[1.65rem] text-marrom-escuro font-bold mb-1">01. O Voo Orgânico</h3>
         <p className="text-[10px] font-bold text-marrom opacity-70 uppercase tracking-[0.2em] mb-4">Acolhimento & Evolução</p>
@@ -551,8 +622,10 @@ export const SlideConcepts = () => (
       </MDiv>
 
       <MDiv className="bg-off-white rounded-3xl p-8 shadow-[0_10px_40px_-15px_rgba(74,60,46,0.1)] border-t-[6px] border-[#C27A62] flex flex-col relative overflow-hidden transition-transform hover:-translate-y-1">
-        <div className="flex justify-center mb-6 pt-4">
-          <Concept2Logo />
+        <div className="flex justify-center mb-6 pt-4 cursor-zoom-in" onClick={() => setZoomedConcept(2)}>
+          <motion.div layoutId="logo-2" className="hover:scale-105 transition-transform duration-300">
+            <Concept2Logo />
+          </motion.div>
         </div>
         <h3 className="text-[1.5rem] text-marrom-escuro font-bold mb-1 font-['Playfair_Display']">02. A Jornada Fluida</h3>
         <p className="text-[10px] font-bold text-[#C27A62] opacity-80 uppercase tracking-[0.2em] mb-4 font-['Lato']">Identidade & Continuidade</p>
@@ -582,8 +655,10 @@ export const SlideConcepts = () => (
       </MDiv>
 
       <MDiv className="bg-off-white rounded-3xl p-8 shadow-[0_10px_40px_-15px_rgba(74,60,46,0.1)] border-t-[6px] border-[#6A828A] flex flex-col relative overflow-hidden transition-transform hover:-translate-y-1">
-        <div className="flex justify-center mb-6 pt-4">
-          <Concept3Logo />
+        <div className="flex justify-center mb-6 pt-4 cursor-zoom-in" onClick={() => setZoomedConcept(3)}>
+          <motion.div layoutId="logo-3" className="hover:scale-105 transition-transform duration-300">
+            <Concept3Logo />
+          </motion.div>
         </div>
         <h3 className="text-[1.5rem] text-marrom-escuro font-medium mb-1 font-['Outfit'] tracking-tight">03. O Ponto Central</h3>
         <p className="text-[10px] font-bold text-[#6A828A] opacity-80 uppercase tracking-[0.2em] mb-4 font-['Inter']">Abordagem Centrada</p>
@@ -614,4 +689,5 @@ export const SlideConcepts = () => (
 
     </div>
   </SlideContainer>
-);
+  );
+};
