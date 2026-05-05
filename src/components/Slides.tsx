@@ -469,13 +469,25 @@ export const Slide8 = () => (
 );
 
 const Concept1Logo = () => (
-  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-[4.5rem] h-[4.5rem] text-[#5C6B47] drop-shadow-sm">
-    <circle cx="50" cy="50" r="42" strokeDasharray="3 4" opacity="0.3"/>
-    <path d="M48 30 C30 20 20 45 44 52 C35 40 45 35 48 30 Z" />
-    <path d="M46 56 C30 55 25 75 44 70 C38 65 42 55 46 56 Z" />
-    <path d="M52 30 C70 20 80 45 56 52 C65 40 55 35 52 30 Z" />
-    <path d="M54 56 C70 55 75 75 56 70 C62 65 58 55 54 56 Z" />
-    <path d="M50 25 C48 40 52 60 50 78" strokeWidth="1.5" strokeLinecap="round" />
+  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="1.5" className="w-[4.5rem] h-[4.5rem] text-[#5C6B47] drop-shadow-sm transition-transform hover:scale-105 duration-300">
+    <circle cx="50" cy="50" r="44" strokeWidth="0.75" strokeDasharray="4 6" opacity="0.4" />
+    <circle cx="50" cy="50" r="38" strokeWidth="0.5" opacity="0.15" />
+    {/* Continuous fluid wings resembling both leaves and a butterfly */}
+    <path 
+      d="M 50 75 
+         C 30 80, 20 60, 40 50 
+         C 15 40, 25 20, 50 35 
+         C 75 20, 85 40, 60 50 
+         C 80 60, 70 80, 50 75 Z" 
+      strokeLinejoin="round"
+    />
+    <path d="M 40 50 C 45 52, 48 65, 50 75" opacity="0.5" />
+    <path d="M 60 50 C 55 52, 52 65, 50 75" opacity="0.5" />
+    <path d="M 40 50 C 45 48, 48 40, 50 35" opacity="0.5" />
+    <path d="M 60 50 C 55 48, 52 40, 50 35" opacity="0.5" />
+    <path d="M 50 25 C 50 40, 50 60, 50 80" strokeLinecap="round" />
+    <circle cx="47" cy="22" r="1.5" fill="currentColor" stroke="none" opacity="0.8" />
+    <circle cx="53" cy="22" r="1.5" fill="currentColor" stroke="none" opacity="0.8" />
   </svg>
 );
 
