@@ -1,6 +1,6 @@
 import { ReactNode, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { CheckCircle2, AlertCircle } from "lucide-react";
+import { CheckCircle2, AlertCircle, Instagram, X } from "lucide-react";
 import { Logo } from "./Logo";
 
 // -- Layout Animations --
@@ -365,12 +365,15 @@ export const Slide5 = () => (
   </SlideContainer>
 );
 
-export const Slide6 = () => (
+export const Slide6 = () => {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  return (
   <SlideContainer className="bg-bege p-8 sm:p-12 lg:p-24 flex-col justify-start sm:justify-center items-center text-center overflow-y-auto relative">
     
     {/* Floating images for visual appeal */}
-    <img src="https://i.ibb.co/JjjjTc3P/ryna-ensaio-novo-7.png" className="absolute top-12 lg:top-24 left-12 w-40 h-56 md:w-48 md:h-64 rounded-2xl object-cover shadow-[0_20px_50px_-15px_rgba(74,60,46,0.3)] -rotate-6 opacity-40 hover:opacity-100 hover:rotate-0 hover:z-50 transition-all duration-700 hidden md:block border-8 border-off-white" />
-    <img src="https://i.ibb.co/wFZk15Gy/ryna-ensaio-novo-9.png" className="absolute bottom-12 lg:bottom-24 right-12 w-40 h-40 md:w-56 md:h-56 rounded-full object-cover shadow-[0_20px_50px_-15px_rgba(74,60,46,0.3)] rotate-6 opacity-40 hover:opacity-100 hover:rotate-0 hover:z-50 transition-all duration-700 hidden md:block border-8 border-off-white" />
+    <img src="https://i.ibb.co/JjjjTc3P/ryna-ensaio-novo-7.png" className="absolute top-12 lg:top-24 left-12 w-40 h-56 md:w-48 md:h-64 rounded-2xl object-cover shadow-[0_20px_50px_-15px_rgba(74,60,46,0.3)] -rotate-6 opacity-40 hover:opacity-100 hover:rotate-0 hover:z-50 transition-all duration-700 hidden md:block border-8 border-off-white pointer-events-auto cursor-zoom-in" onClick={() => setSelectedImage("https://i.ibb.co/JjjjTc3P/ryna-ensaio-novo-7.png")} />
+    <img src="https://i.ibb.co/wFZk15Gy/ryna-ensaio-novo-9.png" className="absolute bottom-12 lg:bottom-24 right-12 w-40 h-40 md:w-56 md:h-56 rounded-full object-cover shadow-[0_20px_50px_-15px_rgba(74,60,46,0.3)] rotate-6 opacity-40 hover:opacity-100 hover:rotate-0 hover:z-50 transition-all duration-700 hidden md:block border-8 border-off-white pointer-events-auto cursor-zoom-in" onClick={() => setSelectedImage("https://i.ibb.co/wFZk15Gy/ryna-ensaio-novo-9.png")} />
 
     <div className="relative z-10 w-full flex flex-col items-center">
       <MDiv className="mb-10 text-center w-full max-w-4xl mt-12 sm:mt-0">
@@ -416,26 +419,85 @@ export const Slide6 = () => (
       </MDiv>
 
       {/* Feature list */}
-      <div className="space-y-6 text-left">
-        {[
-          { num: "1.", title: "Efeito Calma (Hero)", desc: "A primeira impressão visual dita o sentimento. Foco 100% em acolhimento e clareza, sem jargões de vendas." },
-          { num: "2.", title: "Conexão Pessoal", desc: "Sua foto, sua filosofia sobre a abordagem humana e seu registro profissional (CRP) muito claros." },
-          { num: "3.", title: "Jornada sem Fricção", desc: "Integração direta com o WhatsApp ou Calendly, de forma que o agendamento seja suave com um clique." },
-          { num: "4.", title: "Espelho do Feed", desc: "A galeria final do site expõe seu conteúdo do Instagram de forma automática para reter a atenção e validar autoridade." }
-        ].map((feat, i) => (
-          <MDiv key={i} className="flex gap-4">
-            <span className="font-display text-3xl font-light text-verde/50 leading-none">{feat.num}</span>
-            <div>
-              <strong className="block text-marrom-escuro font-medium text-[15px] mb-1">{feat.title}</strong>
-              <p className="text-sm text-marrom leading-relaxed">{feat.desc}</p>
-            </div>
-          </MDiv>
-        ))}
+      <div className="flex flex-col h-full justify-center space-y-8 text-left">
+        <div className="space-y-6">
+          {[
+            { num: "1.", title: "Efeito Calma (Hero)", desc: "A primeira impressão visual dita o sentimento. Foco 100% em acolhimento e clareza, sem jargões de vendas." },
+            { num: "2.", title: "Conexão Pessoal", desc: "Sua foto, sua filosofia sobre a abordagem humana e seu registro profissional (CRP) muito claros." },
+            { num: "3.", title: "Jornada sem Fricção", desc: "Integração direta com o WhatsApp ou Calendly, de forma que o agendamento seja suave com um clique." },
+            { num: "4.", title: "Espelho do Feed", desc: "A galeria expõe seu conteúdo do Instagram para reter a atenção e validar autoridade." }
+          ].map((feat, i) => (
+            <MDiv key={i} className="flex gap-4">
+              <span className="font-display text-3xl font-light text-verde/50 leading-none">{feat.num}</span>
+              <div>
+                <strong className="block text-marrom-escuro font-medium text-[15px] mb-1">{feat.title}</strong>
+                <p className="text-sm text-marrom leading-relaxed">{feat.desc}</p>
+              </div>
+            </MDiv>
+          ))}
+        </div>
+        
+        {/* Instagram Gallery Miniature */}
+        <MDiv className="pt-6 border-t border-marrom-escuro/10 w-full">
+          <div className="flex items-center gap-2 mb-4 text-marrom-escuro">
+            <Instagram size={14} className="opacity-60" />
+            <span className="text-[10px] tracking-[0.2em] uppercase opacity-60 font-medium">Recortes do feed no site</span>
+          </div>
+          <div className="grid grid-cols-4 gap-2">
+            {[
+              "https://i.ibb.co/vCZc6ysC/ryna-ensaio-novo-10.png",
+              "https://i.ibb.co/8gwCR0n7/ryna-ensaio-novo-3.png",
+              "https://i.ibb.co/63RW2yH/ryna-ensaio-novo-5.png",
+              "https://i.ibb.co/pBv2HDH1/ryna-ensaio-novo-4.png"
+            ].map((src, idx) => (
+              <button 
+                key={idx}
+                onClick={() => setSelectedImage(src)}
+                aria-label={`Visualizar imagem ${idx + 1}`}
+                className="aspect-square rounded-md overflow-hidden bg-white shadow-sm border border-black/5 hover:scale-[1.05] hover:shadow-lg hover:z-10 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-verde group relative"
+              >
+                <div className="absolute inset-0 bg-verde/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-none" />
+                <img src={src} alt={`Instagram ${idx + 1}`} className="w-full h-full object-cover object-top grayscale-[20%] group-hover:grayscale-0 transition-all duration-300 transform group-hover:scale-110" />
+              </button>
+            ))}
+          </div>
+        </MDiv>
       </div>
     </div>
     </div>
+
+    <AnimatePresence>
+      {selectedImage && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          onClick={() => setSelectedImage(null)}
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-8 bg-black/80 backdrop-blur-md cursor-pointer"
+        >
+          <motion.div
+            initial={{ scale: 0.95, opacity: 0, y: 20 }}
+            animate={{ scale: 1, opacity: 1, y: 0 }}
+            exit={{ scale: 0.95, opacity: 0, y: 20 }}
+            transition={{ type: "spring", damping: 25, stiffness: 300 }}
+            className="relative max-w-5xl max-h-[90vh] w-full rounded-2xl overflow-hidden shadow-2xl cursor-default"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button 
+              onClick={() => setSelectedImage(null)}
+              aria-label="Fechar"
+              className="absolute top-4 right-4 sm:top-6 sm:right-6 w-12 h-12 bg-black/50 hover:bg-black/80 text-white rounded-full flex items-center justify-center backdrop-blur-md transition-all z-10 focus:outline-none focus:ring-2 focus:ring-verde"
+            >
+              <X size={24} />
+            </button>
+            <img src={selectedImage} alt="Imagem ampliada" className="w-full h-full object-contain max-h-[90vh] bg-transparent" />
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   </SlideContainer>
-);
+  );
+};
 
 export const Slide7 = () => (
   <SlideContainer className="bg-marrom-escuro p-8 sm:p-12 lg:p-24 flex-col justify-start sm:justify-center relative overflow-y-auto overflow-x-hidden">

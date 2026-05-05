@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { AnimatePresence } from 'motion/react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Slide1, Slide2, Slide3, SlideConcepts, Slide4, Slide5, Slide6, Slide7, Slide8 } from './components/Slides';
@@ -70,21 +70,23 @@ export default function App() {
 
       {/* Navigation Footer */}
       <footer className="absolute bottom-6 left-0 right-0 z-50 flex items-center justify-center pointer-events-none px-4 sm:px-8">
-        <div className="pointer-events-auto flex items-center bg-marrom-escuro/80 backdrop-blur-xl border border-white/10 p-1.5 sm:p-2 rounded-full gap-1 sm:gap-1.5 shadow-2xl overflow-x-auto max-w-full hidden-scrollbar scroll-smooth">
+        <nav aria-label="Navegação da apresentação" className="pointer-events-auto flex items-center bg-marrom-escuro/95 backdrop-blur-xl border border-white/20 p-1.5 sm:p-2 rounded-full gap-1 sm:gap-1.5 shadow-2xl overflow-x-auto max-w-full hidden-scrollbar scroll-smooth">
           {slideLabels.map((lbl, idx) => (
             <button
               key={idx}
               onClick={() => setCurrent(idx)}
+              aria-label={`Ir para o slide ${idx + 1}: ${lbl}`}
+              aria-current={current === idx ? "step" : undefined}
               className={`px-3 sm:px-4 py-2 rounded-full text-[9px] sm:text-[10px] font-bold tracking-widest uppercase transition-all duration-300 whitespace-nowrap shrink-0 ${
                 current === idx 
                   ? 'bg-verde text-off-white shadow-md' 
-                  : 'text-bege/50 hover:text-bege hover:bg-white/5'
+                  : 'text-bege/80 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-verde focus:text-white'
               }`}
             >
               {lbl}
             </button>
           ))}
-        </div>
+        </nav>
       </footer>
 
       {/* Floating Arrows */}
@@ -92,14 +94,16 @@ export default function App() {
         <button 
           onClick={prevSlide}
           disabled={current === 0}
-          className="w-10 h-10 rounded-full flex items-center justify-center bg-white/5 hover:bg-verde border border-white/10 disabled:opacity-20 disabled:hover:bg-white/5 transition-colors text-bege"
+          aria-label="Slide anterior"
+          className="w-10 h-10 rounded-full flex items-center justify-center bg-marrom-escuro/90 hover:bg-verde border border-white/20 disabled:opacity-30 disabled:hover:bg-marrom-escuro/90 transition-all text-bege hover:text-white focus:outline-none focus:ring-2 focus:ring-verde"
         >
           <ChevronLeft size={18} />
         </button>
         <button 
           onClick={nextSlide}
           disabled={current === slidesList.length - 1}
-          className="w-10 h-10 rounded-full flex items-center justify-center bg-white/5 hover:bg-verde border border-white/10 disabled:opacity-20 disabled:hover:bg-white/5 transition-colors text-bege"
+          aria-label="Próximo slide"
+          className="w-10 h-10 rounded-full flex items-center justify-center bg-marrom-escuro/90 hover:bg-verde border border-white/20 disabled:opacity-30 disabled:hover:bg-marrom-escuro/90 transition-all text-bege hover:text-white focus:outline-none focus:ring-2 focus:ring-verde"
         >
           <ChevronRight size={18} />
         </button>
