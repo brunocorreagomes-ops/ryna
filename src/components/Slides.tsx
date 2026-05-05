@@ -468,43 +468,16 @@ export const Slide8 = () => (
   </SlideContainer>
 );
 
-const Concept1Logo = ({ className = "w-[4.5rem] h-[4.5rem]" }: { className?: string }) => (
-  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="1.5" className={`${className} text-[#5C6B47] drop-shadow-sm transition-transform duration-300`}>
-    <circle cx="50" cy="50" r="44" strokeWidth="0.75" strokeDasharray="4 6" opacity="0.4" />
-    <circle cx="50" cy="50" r="38" strokeWidth="0.5" opacity="0.15" />
-    {/* Continuous fluid wings resembling both leaves and a butterfly */}
-    <path 
-      d="M 50 75 
-         C 30 80, 20 60, 40 50 
-         C 15 40, 25 20, 50 35 
-         C 75 20, 85 40, 60 50 
-         C 80 60, 70 80, 50 75 Z" 
-      strokeLinejoin="round"
-    />
-    <path d="M 40 50 C 45 52, 48 65, 50 75" opacity="0.5" />
-    <path d="M 60 50 C 55 52, 52 65, 50 75" opacity="0.5" />
-    <path d="M 40 50 C 45 48, 48 40, 50 35" opacity="0.5" />
-    <path d="M 60 50 C 55 48, 52 40, 50 35" opacity="0.5" />
-    <path d="M 50 25 C 50 40, 50 60, 50 80" strokeLinecap="round" />
-    <circle cx="47" cy="22" r="1.5" fill="currentColor" stroke="none" opacity="0.8" />
-    <circle cx="53" cy="22" r="1.5" fill="currentColor" stroke="none" opacity="0.8" />
-  </svg>
+const Concept1Logo = ({ className = "h-32 md:h-40 w-auto rounded-xl" }: { className?: string }) => (
+  <img src="https://i.ibb.co/FLCKjQyt/modelo-logo-1.png" alt="Concept 1" className={`${className} object-contain drop-shadow-sm transition-transform duration-300`} />
 );
 
-const Concept2Logo = ({ className = "w-[4.5rem] h-[4.5rem]" }: { className?: string }) => (
-  <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="2" className={`${className} text-[#C27A62] drop-shadow-sm transition-transform duration-300`}>
-    <path d="M 38 82 C 38 72 38 32 38 32 C 38 22 62 22 62 36 C 62 48 48 50 48 50 C 58 50 68 58 72 82" strokeLinecap="round" strokeLinejoin="round" />
-    <circle cx="50" cy="50" r="44" strokeWidth="0.5" opacity="0.2" />
-    <path d="M 24 50 C 32 32 68 32 76 50 C 68 68 32 68 24 50 Z" strokeWidth="0.5" opacity="0.4" />
-  </svg>
+const Concept2Logo = ({ className = "h-32 md:h-40 w-auto rounded-xl" }: { className?: string }) => (
+  <img src="https://i.ibb.co/WvbhXQc6/modelo-logo-2.png" alt="Concept 2" className={`${className} object-contain drop-shadow-sm transition-transform duration-300`} />
 );
 
-const Concept3Logo = ({ className = "w-[4.5rem] h-[4.5rem]" }: { className?: string }) => (
-  <svg viewBox="0 0 100 100" fill="none" className={`${className} drop-shadow-sm transition-transform duration-300`}>
-    <path d="M 38 38 C 55 28 68 42 60 60 C 52 75 34 65 38 38 Z" fill="#6A828A" opacity="0.85" />
-    <path d="M 62 38 C 75 48 72 70 55 75 C 38 80 46 32 62 38 Z" fill="#B4A89E" opacity="0.8" />
-    <circle cx="50" cy="50" r="44" stroke="#4A3C2E" strokeWidth="1" opacity="0.4" strokeDasharray="12 4" strokeLinecap="round" fill="none" />
-  </svg>
+const Concept3Logo = ({ className = "h-32 md:h-40 w-auto rounded-xl" }: { className?: string }) => (
+  <img src="https://i.ibb.co/qY8Y70xK/modelo-logo-3.png" alt="Concept 3" className={`${className} object-contain drop-shadow-sm transition-transform duration-300`} />
 );
 
 export const SlideConcepts = () => {
@@ -578,7 +551,7 @@ export const SlideConcepts = () => {
         )}
       </AnimatePresence>
 
-      <MDiv className="mt-8 mb-8 text-center w-full max-w-4xl shrink-0">
+      <MDiv className="mt-8 mb-8 text-center w-full max-w-4xl shrink-0 flex flex-col items-center">
       <div className="text-[10px] tracking-[0.3em] uppercase text-marrom mb-3">Expansão de Identidade Visual</div>
       <h2 className="font-display text-4xl lg:text-5xl font-light text-marrom-escuro leading-tight mb-2">
         3 Conceitos de <em className="text-verde">Marca</em>
